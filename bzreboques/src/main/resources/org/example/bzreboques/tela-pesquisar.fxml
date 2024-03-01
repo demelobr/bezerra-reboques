@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bzreboques.TelaPesquisarController">
+   <top>
+      <HBox alignment="CENTER" maxHeight="65.0" minHeight="65.0" prefHeight="65.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="65.0" prefWidth="125.0" HBox.hgrow="ALWAYS" />
+            <HBox fx:id="hbPushMsgTelaPesquisar" alignment="CENTER" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" minWidth="400.0" prefHeight="45.0" prefWidth="400.0" stylesheets="@style.css">
+               <styleClass>
+                  <String fx:value="push-msg-error" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label fx:id="lbPushMsgTelaPesquisar" prefHeight="18.0" prefWidth="350.0" text="Mensagem de erro ou sucesso..." textFill="WHITE">
+                     <font>
+                        <Font name="Inter Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox fx:id="btnFecharPushMsgTelaPesquisar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#fecharPushMsg" prefHeight="28.0" prefWidth="28.0" styleClass="btn-fechar" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cil-x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="65.0" prefWidth="116.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lbDataHoraTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="145.0" textFill="#1e1e1e">
+               <font>
+                  <Font name="Inter Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <HBox alignment="CENTER" maxHeight="485.0" maxWidth="165.0" minHeight="485.0" minWidth="165.0" prefHeight="485.0" prefWidth="165.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" maxHeight="350.0" maxWidth="135.0" minHeight="350.0" minWidth="135.0" prefHeight="350.0" prefWidth="135.0" stylesheets="@style.css">
+               <styleClass>
+                  <String fx:value="nav-bar" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <HBox fx:id="hbCadastrarNavTelaPesquisar" alignment="CENTER_LEFT" maxHeight="32.0" maxWidth="125.0" minHeight="32.0" minWidth="125.0" onMouseClicked="#trocarParaTelaCadastrar" prefHeight="32.0" prefWidth="125.0" styleClass="btn-nav-bar" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@add-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="15.0" prefWidth="68.0" text="Cadastrar" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hbPesquisarNavTelaPesquisar" alignment="CENTER_LEFT" layoutX="28.0" layoutY="169.0" maxHeight="32.0" maxWidth="125.0" minHeight="32.0" minWidth="125.0" prefHeight="32.0" prefWidth="125.0" styleClass="btn-nav-bar" stylesheets="@style.css">
+                     <children>
+                        <Pane maxHeight="32.0" maxWidth="2.0" minHeight="32.0" minWidth="2.0" prefHeight="32.0" prefWidth="2.0" styleClass="selecionador" stylesheets="@style.css" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@search-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="15.0" prefWidth="68.0" text="Pesquisar" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hbConfigNavTelaPesquisar" alignment="CENTER_LEFT" layoutX="28.0" layoutY="153.0" maxHeight="32.0" maxWidth="125.0" minHeight="32.0" minWidth="125.0" onMouseClicked="#trocarParaTelaConfiguracoes" prefHeight="32.0" prefWidth="125.0" styleClass="btn-nav-bar" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@setting-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="15.0" prefWidth="90.0" text="Configurações" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hbNuvemNavTelaPesquisar" alignment="CENTER_LEFT" layoutX="28.0" layoutY="137.0" maxHeight="32.0" maxWidth="125.0" minHeight="32.0" minWidth="125.0" onMouseClicked="#trocarParaTelaNuvem" prefHeight="32.0" prefWidth="125.0" styleClass="btn-nav-bar" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cloud-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="15.0" prefWidth="68.0" text="Nuvem" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER" layoutX="28.0" layoutY="121.0" maxHeight="32.0" maxWidth="122.0" minHeight="32.0" minWidth="100.0" prefHeight="32.0" prefWidth="122.0">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@database-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbConexaoNavTelaPesquisar" prefHeight="15.0" prefWidth="87.0" text="Desconectado" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxHeight="100.0" prefHeight="0.0" prefWidth="785.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="835.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@search-red.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="126.0" text="Pesquisar">
+                     <font>
+                        <Font name="Inter Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="350.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tvDocumentosTelaPesquisar" editable="true" prefHeight="350.0" prefWidth="602.0" styleClass="tabela" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tcEquipamentoTelaPesquisar" minWidth="100.0" prefWidth="125.0" text="Equipamento" />
+                      <TableColumn fx:id="tcPlacaTelaPesquisar" minWidth="100.0" prefWidth="100.0" text="Placa" />
+                        <TableColumn fx:id="tcNumeracaoTelaPesquisar" minWidth="200.0" prefWidth="200.0" text="Numeração" />
+                        <TableColumn fx:id="tcDataHoraTelaPesquisar" minWidth="150.0" prefWidth="175.0" text="Data e Hora" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="55.0">
+               <children>
+                  <HBox fx:id="hbPesquisarTelaPesquisar" alignment="CENTER" maxHeight="40.0" maxWidth="275.0" minHeight="40.0" minWidth="275.0" prefHeight="40.0" prefWidth="275.0" styleClass="input-box" stylesheets="@style.css">
+                     <children>
+                        <TextField fx:id="tfPesquisarTelaPesquisar" maxHeight="40.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Pesquise por placa ou numeração" styleClass="input-box" stylesheets="@style.css">
+                           <font>
+                              <Font name="Inter Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@search-grey.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="55.0" prefWidth="129.0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="lbResultadosEncontradosTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="262.0" text="0 resultado(s) encontrado(s)" textFill="#1e1e1e">
+                     <font>
+                        <Font name="Inter Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane layoutX="10.0" layoutY="62.0" prefHeight="0.0" prefWidth="785.0" VBox.vgrow="ALWAYS" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <right>
+      <HBox alignment="CENTER_LEFT" maxHeight="500.0" maxWidth="320.0" minHeight="500.0" minWidth="230.0" prefHeight="500.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="305.0" minHeight="465.0" prefHeight="485.0" prefWidth="215.0" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="caixa-de-selecao" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <HBox alignment="CENTER" maxHeight="135.0" maxWidth="185.0" minHeight="135.0" minWidth="185.0" prefHeight="135.0" prefWidth="185.0" styleClass="campo-img" stylesheets="@style.css">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="15.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="imgEquipamentosTelaPesquisar" fitHeight="135.0" fitWidth="185.0" pickOnBounds="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxHeight="28.0" maxWidth="185.0" minHeight="28.0" minWidth="185.0" prefHeight="28.0" prefWidth="185.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="28.0" maxWidth="60.0" minHeight="28.0" minWidth="60.0" prefHeight="28.0" prefWidth="60.0">
+                           <children>
+                              <HBox fx:id="btnEsquerdaTelaPesquisar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#setaEsquerda" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@arrow-left-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox fx:id="btnDireitaTelaPesquisar" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#setaDireita" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@arrow-right-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="28.0" maxWidth="60.0" minHeight="28.0" minWidth="60.0" prefHeight="28.0" prefWidth="60.0" stylesheets="@style.css">
+                           <children>
+                              <HBox fx:id="btnDetalharTelaPesquisar" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#detalharDocumento" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@arrows-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label fx:id="lbEquipamentoTelaPesquisar" prefHeight="20.0" prefWidth="249.0" text="Motor" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbDovTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="251.0" text="289117" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="233.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="258.0" text="Nome Cliente" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbNomeClienteTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="262.0" text="José Carlos" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="239.0" text="Numeração" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbNumeracaoTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="262.0" text="9BGXL80P0AC3UF" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="223.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="216.0" text="Processo" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbProcessoTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="289117" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="243.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="194.0" text="Placa" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbPlacaTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="KHZ2234" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="263.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="213.0" text="Renavam" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbRenavamTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="200972421" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="283.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="194.0" text="Cor" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbCorTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="Prata" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="303.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="257.0" text="Marca/Modelo" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbMarcaModeloTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="GM/Montana" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="323.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="271.0" text="Ano Fabricação" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbAnoFabricacaoTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="2010" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="343.0" maxHeight="20.0" maxWidth="185.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="185.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="237.0" text="Ano Modelo" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Label fx:id="lbAnoModeloTelaPesquisar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="2010" textFill="#1e1e1e">
+                           <font>
+                              <Font name="Inter Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxHeight="35.0" maxWidth="185.0" minHeight="35.0" minWidth="185.0" prefHeight="35.0" prefWidth="185.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="28.0" maxWidth="60.0" minHeight="28.0" minWidth="60.0" prefHeight="28.0" prefWidth="60.0" stylesheets="@style.css">
+                           <children>
+                              <HBox fx:id="btnEditarTelaPesquisar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#editarDocumento" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@edit-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox fx:id="btnDeletarTelaPesquisar" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#confirmarDelecaoDeDocumento" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@trash-white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                        <Button fx:id="btnGerarTelaPesquisar" maxHeight="35.0" maxWidth="100.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" onAction="#gerarDocumento" prefHeight="35.0" prefWidth="100.0" styleClass="btn-nav-bar" stylesheets="@style.css" text="Gerar" textFill="WHITE">
+                           <font>
+                              <Font name="Inter Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </VBox>
+         </children></HBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

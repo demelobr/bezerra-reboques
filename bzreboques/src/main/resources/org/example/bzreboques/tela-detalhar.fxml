@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bzreboques.TelaDetalharController">
+   <top>
+      <HBox alignment="CENTER" maxHeight="65.0" minHeight="65.0" prefHeight="65.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="65.0" prefWidth="125.0" HBox.hgrow="ALWAYS" />
+            <HBox fx:id="hbPushMsgTelaDetalhar" alignment="CENTER" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" minWidth="400.0" prefHeight="45.0" prefWidth="400.0" stylesheets="@style.css">
+               <styleClass>
+                  <String fx:value="push-msg-error" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label fx:id="lbPushMsgTelaDetalhar" prefHeight="18.0" prefWidth="546.0" text="Mensagem de erro ou sucesso..." textFill="WHITE">
+                     <font>
+                        <Font name="Inter Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox fx:id="btnFecharPushMsgTelaDetalhar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#fecharPushMsg" prefHeight="28.0" prefWidth="28.0" styleClass="btn-fechar" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cil-x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="65.0" prefWidth="116.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lbDataHoraTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="145.0" textFill="#1e1e1e">
+               <font>
+                  <Font name="Inter Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <HBox maxHeight="485.0" maxWidth="165.0" minHeight="485.0" minWidth="100.0" prefHeight="485.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" maxHeight="50.0" maxWidth="165.0" minHeight="32.0" minWidth="100.0" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox fx:id="btnVoltarTelaDetalhar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#trocarParaTelaPesquisar" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@arrow-left-white.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxHeight="100.0" prefHeight="0.0" prefWidth="785.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="835.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@more-red.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Detalhamento">
+                     <font>
+                        <Font name="Inter Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="350.0" prefWidth="785.0">
+               <children>
+                  <VBox prefHeight="350.0" prefWidth="400.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" styleClass="campo-img" stylesheets="@style.css">
+                           <children>
+                              <ImageView fx:id="imgEquipamentoTelaDetalhar" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="388.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxHeight="28.0" maxWidth="60.0" minHeight="28.0" minWidth="60.0" prefHeight="28.0" prefWidth="60.0" stylesheets="@style.css">
+                                 <children>
+                                    <HBox fx:id="btnEsquerdaTelaDetalhar" alignment="CENTER" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#setaEsquerda" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                       <children>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@arrow-left-white.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                    <HBox fx:id="btnDireitaTelaDetalhar" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" onMouseClicked="#setaDireita" prefHeight="28.0" prefWidth="28.0" styleClass="btn-grey" stylesheets="@style.css">
+                                       <children>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@arrow-right-white.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Pane maxWidth="50.0" prefWidth="20.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="350.0" prefWidth="450.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Informações detalhadas">
+                                 <font>
+                                    <Font name="Inter Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="430.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label fx:id="lbEquipamentoTelaDetalhar" prefHeight="20.0" prefWidth="249.0" text="Motor" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbDovTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="251.0" text="289117" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="276.0" text="Nome Cliente" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbNomeClienteTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="451.0" text="José Carlos" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="239.0" text="Numeração" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbNumeracaoTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="351.0" text="9BGXL80P0AC3UF" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="216.0" text="Processo" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbProcessoTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="289117" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="194.0" text="Placa" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbPlacaTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="KHZ2234" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="213.0" text="Renavam" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbRenavamTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="200972421" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="194.0" text="Cor" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbCorTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="Prata" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="257.0" text="Marca/Modelo" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbMarcaModeloTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="345.0" text="GM/Montana" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="271.0" text="Ano Fabricação" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbAnoFabricacaoTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="2010" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="237.0" text="Ano Modelo" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbAnoModeloTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="245.0" text="2010" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="25.0" layoutY="287.0" maxHeight="20.0" maxWidth="425.0" minHeight="20.0" minWidth="185.0" prefHeight="20.0" prefWidth="425.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="237.0" text="Data e hora" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="lbDataEHoraTelaDetalhar" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="319.0" text="24/09/2023 - 22:17" textFill="#1e1e1e">
+                                 <font>
+                                    <Font name="Inter Regular" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" />
+            <Pane layoutX="10.0" layoutY="62.0" prefHeight="0.0" prefWidth="785.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <HBox prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox prefHeight="50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

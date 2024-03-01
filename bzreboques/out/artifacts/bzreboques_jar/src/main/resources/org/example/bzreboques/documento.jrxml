@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="documento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8218200d-78a9-41d4-8fb0-d145167b55b4">
+	<parameter name="LOGO" class="java.lang.String"/>
+	<parameter name="QRCODE" class="java.lang.String"/>
+	<parameter name="GESTOR_DETRAN" class="java.lang.String"/>
+	<parameter name="NOME_CLIENTE" class="java.lang.String"/>
+	<parameter name="DOV" class="java.lang.String"/>
+	<parameter name="EQUIPAMENTO" class="java.lang.String"/>
+	<parameter name="NUMERACAO" class="java.lang.String"/>
+	<parameter name="PROCESSO" class="java.lang.String"/>
+	<parameter name="RENAVAM" class="java.lang.String"/>
+	<parameter name="PLACA" class="java.lang.String"/>
+	<parameter name="COR" class="java.lang.String"/>
+	<parameter name="MARCA_MODELO" class="java.lang.String"/>
+	<parameter name="ANO_FABRICACAO" class="java.lang.String"/>
+	<parameter name="ANO_MODELO" class="java.lang.String"/>
+	<parameter name="FOTO_1" class="java.lang.String"/>
+	<parameter name="FOTO_2" class="java.lang.String"/>
+	<parameter name="RAZAO_SOCIAL" class="java.lang.String"/>
+	<parameter name="CNPJ" class="java.lang.String"/>
+	<parameter name="INSCRICAO_MUNICIPAL" class="java.lang.String"/>
+	<parameter name="ENDERECO" class="java.lang.String"/>
+	<parameter name="TELEFONE" class="java.lang.String"/>
+	<parameter name="DATA_DO_DIA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band height="108" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<image>
+				<reportElement x="188" y="0" width="183" height="47" uuid="d3ecfa01-d8b4-4c71-9dc9-c41f4d71d424">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="502" y="0" width="50" height="50" uuid="6a74f008-1af7-4485-b170-4490a1cea3e2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{QRCODE}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="747" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="140" width="338" height="20" uuid="eb70ebc9-2cc9-4902-9d75-3cdacc2e745d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOME_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="120" width="50" height="20" uuid="0cba80d9-2b73-4adc-b8f5-1171f0671bba"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EQUIPAMENTO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="ee2ce507-7307-4dbd-a979-3952ad4238ce"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AO DETRAN/PE,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="70" height="20" uuid="401da0c5-1c95-4005-9a61-219423489611"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ILMO SR(A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="250" height="20" uuid="576ae2be-9ce0-47ca-b4ea-c4fd333c4f4e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GESTOR(A) DE REGISTROS DE VEÍCULOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="310" height="20" uuid="35284da5-7a89-4cdd-b5f5-48d2c854d9fd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRETORIA DE REGISTROS DE VEÍCULOS - DOV No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="200" height="20" uuid="38ff0f85-7706-4391-929d-9278723a08c3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NESTA, PREZADO(A) SENHOR(A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="308" height="20" uuid="e9c14cb1-52f1-4f85-b1b2-b1905643e331"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMAMOS QUE REABRIMOS A NUMERAÇÃO DO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="40" height="20" uuid="9f1396e3-1805-4a3c-b1b8-fad17d9d2e22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SR(A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="98" height="20" uuid="1289b912-e0b5-41f4-a333-0f1dc176d639"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROCESSO No. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="306" y="80" width="100" height="20" uuid="b31f8fb3-fd57-4f4c-8b11-077d48c5e153"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DOV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="120" width="202" height="20" uuid="25a82707-21aa-4938-b95d-058d867c3d9e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="160" width="100" height="20" uuid="4b243b33-9b1d-464f-b7bc-9abea0c44f13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PROCESSO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="180" width="50" height="20" uuid="0be5c583-64d3-4576-9006-c74177e74ae4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLACA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="180" width="68" height="20" uuid="57e1b848-94f3-4442-bfaf-ff59988255b2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PLACA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="200" width="70" height="20" uuid="af75945a-b043-4806-8256-1f0fa68090a2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RENAVAM:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="40" height="20" uuid="66e15891-c8b1-4324-85b8-e4d5ade03944"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="240" width="110" height="20" uuid="55cfbb75-9b8b-4e2b-9ed6-778311fd1ffd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARCA/MODELO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="120" height="20" uuid="fbc7c2fa-2c0a-490e-a8ef-b87755730a43"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO FABRICAÇÃO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="90" height="20" uuid="eddb2cf4-6dd1-4864-977b-22f44e2caf26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO MODELO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="550" width="50" height="20" uuid="2afab22d-5c60-41f4-8bef-452ab65527ba"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIFE, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="570" width="120" height="20" uuid="f6d2797a-b0b2-466b-bd98-f3630acdf8fa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATENCIOSAMENTE,]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="630" width="230" height="1" uuid="c0bfb967-4d61-477b-89c7-d03a8b96e38d"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="630" width="230" height="30" uuid="2edb5159-493f-4a9c-9cbe-73f32402b66b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NELSON MATHIAS SANTOS BEZERRA - ME OU
+REJANE MARIA CARMO DA SILVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="200" width="118" height="20" uuid="ad89a407-0a72-4d55-ad4d-bd4bfd45c9ed"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RENAVAM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="32" y="220" width="118" height="20" uuid="6c50a0dc-e63e-4b17-b0d8-0ebaddc4ccc7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="240" width="193" height="20" uuid="0f9ca5c9-df0a-4a08-9015-1b5eeb35809f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MARCA_MODELO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="260" width="118" height="20" uuid="92d726a1-84d4-4980-af52-b9f60324d600"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ANO_FABRICACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="280" width="118" height="20" uuid="0eef9bda-b2a9-47f3-a8a1-5f832b7ca7b6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ANO_MODELO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="40" width="336" height="20" uuid="3c72d2b5-190b-4c8e-a1ea-19f41a00e31c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GESTOR_DETRAN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="310" width="50" height="20" uuid="6c67e9c0-3e3b-4fcc-8612-98b3c6274091"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOTOS:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="280" y="330" width="200" height="200" uuid="863a05d9-dcf5-4b1f-9f8e-d35d8fdf8097"/>
+				<imageExpression><![CDATA[$P{FOTO_2}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="60" y="330" width="200" height="200" uuid="6ef6168f-c24c-42f5-95d0-4d32846ebd00"/>
+				<imageExpression><![CDATA[$P{FOTO_1}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="670" width="560" height="1" uuid="f947cbc7-19ed-4430-b38e-d27f054b5749"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="680" width="80" height="20" uuid="563ef242-e6af-41c2-a19f-908b21c2d538"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAZÃO SOCIAL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="88" y="680" width="414" height="20" uuid="dc0610a8-5c52-4692-81fb-0327d9aec0af"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RAZAO_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="700" width="32" height="20" uuid="027169fc-23b9-489b-b10d-b7cc683185d6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="268" y="700" width="80" height="20" uuid="24867f10-2514-4464-86dd-66d4d7f97e4c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{INSCRICAO_MUNICIPAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="148" y="700" width="120" height="20" uuid="08a5a8eb-5b30-4b69-b0a7-c85341717f45"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSCRIÇÃO MUNICIPAL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="700" width="108" height="20" uuid="718f3bc5-958f-45de-80a5-e00234bd2b3f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CNPJ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="720" width="260" height="20" uuid="f134b373-954b-4db5-8acf-ab6685c274b0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ENDERECO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="268" y="720" width="32" height="20" uuid="ac0bf78b-4516-4e62-a748-8f3f90688c88"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FONE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="720" width="202" height="20" uuid="d8ab3884-b116-4a9c-9e63-66bf16dfefdd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TELEFONE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="550" width="320" height="20" uuid="c4ad0f58-fe0e-4288-8577-f8afb5a62c30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DATA_DO_DIA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
